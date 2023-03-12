@@ -38,6 +38,8 @@ RUN mv /tmp/ssh_config /root/.ssh/config && \
 
 COPY start-hadoop.sh /opt/start-hadoop.sh
 
+COPY run.sh /opt/bitnami/scripts/spark/run.sh
+
 RUN chmod +x /opt/start-hadoop.sh && \
     chmod +x $HADOOP_HOME/sbin/start-dfs.sh && \
     chmod +x $HADOOP_HOME/sbin/start-yarn.sh 
